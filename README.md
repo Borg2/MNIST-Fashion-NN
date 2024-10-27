@@ -41,33 +41,6 @@ The model is compiled with the Adam optimizer, categorical crossentropy loss fun
 
 The model is trained for 40 epochs using a batch size of 32 and early stopping with validation data (`(x_val, y_val)`) to prevent overfitting.
 
-## **Usage (Replace with your actual file paths)**
-
-1. **Load the data:**
-   ```python
-   import tensorflow as tf
-   (x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
-   ```
-
-2. **Preprocess the data:** This may include normalization or one-hot encoding of labels.
-
-3. **Train the model:**
-   ```python
-   history = model.fit(x_train, y_train, epochs=40, batch_size=32, validation_data=(x_val, y_val), callbacks=[LearningRateScheduler(scheduler)])
-   ```
-
-4. **Evaluate the model:**
-   ```python
-   test_loss, test_acc = model.evaluate(x_test, y_test)
-   print('Test accuracy:', test_acc)
-   ```
-
-5. **Make predictions:**
-   ```python
-   predictions = model.predict(x_test)
-   predicted_classes = np.argmax(predictions, axis=1)
-   ```
-
 ## **Improvements**
 
 * Consider using convolutional layers instead of fully connected layers to capture spatial features in the images.
